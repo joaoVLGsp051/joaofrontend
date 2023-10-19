@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>body{
+    background-color: blue;
+    color: antiquewhite;
+    font: normal 18pt arial;}
+
+</style>
+</head>
+<body>
+    <h1>iniciando os estudos com dom</h1>
+    <p>aqui tem um paragrafo</p>
+    <p>aprendendo a usar o <strong>DOM</strong> em javascript.</p>
+
+    <p id="pteste">outro texto</p>
+    <p class="pclasse">mais um</p>
+    <p>mais um textinho</p>
+    <button id="button">clique em mim </button>
+    <button id="button">clique em mim tambem</button>
+
+    <script>
+        let corpo = document.body
+        corpo.style.backgroundColor = "black"
+
+        let paragrafo1 = document.getElementsByTagName("p")[1]
+        paragrafo1.style.color = "red"
+
+        let clique = document.querySelector("button");
+
+        clique.addEventListener("click", function(event) {
+            paragrafo1.style.color = "white"
+            corpo.style.backgroundColor = "blue";
+        })
+
+
+        clique.addEventListener("click", function(event){
+
+            console.log("voce clicou aqui")
+        })
+
+
+        let mouseEmCima = document.getElementById("button")
+
+        mouseEmCima.addEventListener("mouseover", function(event){
+            console,log("passou o mouse por cima")
+        })
+
+        mouse.addEventListener("mouseout", function(event){
+            console.log("mouse saiu de cima")
+        });
+
+        document.addEventListener("keydowm", function(event){
+            console.log("tecla pressionada " + event.key)
+        })
+    </script>
+</body>
+</html>
